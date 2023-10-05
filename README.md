@@ -48,35 +48,35 @@ PowerPoint Presentation: Compile the project's findings, methodologies, and dash
 ## 1.Print the Overall revenue made by the E- Commerce Company
 select sum(total_order_amount) as Total_Revenue from orders;
 
-# 2. Print the average total order amount across all orders in the database.
+## 2. Print the average total order amount across all orders in the database.
 select avg(Total_order_amount) as Average_Total_Order_Amount from orders;
 
-# 3. Print details of orders which have total order amount between 10000 and 20000 (both inclusive).Sort your output in ascending order of OrderID.
+## 3. Print details of orders which have total order amount between 10000 and 20000 (both inclusive).Sort your output in ascending order of OrderID.
 select * from orders 
 where total_order_amount between 10000 and 20000
 order by orderid asc;
 
-# 4. Print details of orders which either have Total Order Amount less than 2000 or greater than 90000. Sort your output in ascending order of OrderID.
+## 4. Print details of orders which either have Total Order Amount less than 2000 or greater than 90000. Sort your output in ascending order of OrderID.
 select * from orders
 where total_order_amount<2000 or total_order_amount>90000
 order by orderid  asc;
 
-# 5. Find the Number of Customers belonging to each City of every Country.Print City, Country and Number of Customers belonging to each City and Country combination in your output.Sort the result set in alphabetical order of City names.
+## 5. Find the Number of Customers belonging to each City of every Country.Print City, Country and Number of Customers belonging to each City and Country combination in your output.Sort the result set in alphabetical order of City names.
  select city, country, count(distinct customerid) as cnt from customers
  group by city, country
  order by city, country asc;
  
- # 6. Get the average Market Price across combinations of each Brand and Type. Print Brand in first column, Type in second column, followed by corresponding average Market Price in the third column.Sort the result set in alphabetical order of Brand, for rows with same Brand, sort them in alphabetical order of Type.
+ ## 6. Get the average Market Price across combinations of each Brand and Type. Print Brand in first column, Type in second column, followed by corresponding average Market Price in the third column.Sort the result set in alphabetical order of Brand, for rows with same Brand, sort them in alphabetical order of Type.
  select brand, type, avg(market_price) as avg_market_price from  products
  group by brand, type
  order by brand, type asc;
  
- # 7. Get the MAX Sale Price of Products across each Sub-Category. Sort the result set in alphabetical order of sub category.
+ ## 7. Get the MAX Sale Price of Products across each Sub-Category. Sort the result set in alphabetical order of sub category.
  select sub_category, max(sale_price) as Max_Sale_Price from products
  group  by sub_category
  order by sub_category;
  
- # 8. Get the number of Customers from each city.Print City names in reverse alphabetical order in First column, count of customers in second column.
+ ## 8. Get the number of Customers from each city.Print City names in reverse alphabetical order in First column, count of customers in second column.
  select city, count(distinct customerid) as Count_of_Customers from customers
  group  by city
  order by city desc;
