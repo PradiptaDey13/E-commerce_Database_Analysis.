@@ -45,7 +45,7 @@ PowerPoint Presentation: Compile the project's findings, methodologies, and dash
 
 # Ecommerce Database Analysis by using SQL Query 
 
-# 1.Print the Overall revenue made by the E- Commerce Company
+## 1.Print the Overall revenue made by the E- Commerce Company
 select sum(total_order_amount) as Total_Revenue from orders;
 
 # 2. Print the average total order amount across all orders in the database.
